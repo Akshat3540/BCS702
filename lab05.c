@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
-    if (size < 2) { if (rank == 0) printf("Run with at least 2 processes.\n"); }
+    if (size < 2) printf("Run with at least 2 processes.\n");
     else if (rank == 0)
     {
         printf("Process %d sending %d to process 1\n", rank, number);
